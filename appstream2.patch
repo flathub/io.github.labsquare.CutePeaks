@@ -1,0 +1,86 @@
+From a71caff10ad8443663e6a841a3f55c99c1153249 Mon Sep 17 00:00:00 2001
+Date: Sun, 10 Nov 2024 23:53:34 +0100
+Subject: [PATCH] Adhere to AppStream specification.
+
+---
+ cutepeaks.pro                                       |   2 +-
+ ...epeaks.png => io.github.labsquare.CutePeaks.png} | Bin
+ ...desktop => io.github.labsquare.CutePeaks.desktop |   2 +-
+ io.github.labsquare.CutePeaks.metainfo.xml          |   7 +++++--
+ src/src.pro                                         |   4 ++--
+ 5 files changed, 9 insertions(+), 6 deletions(-)
+ rename icon/256/{cutepeaks.png => io.github.labsquare.CutePeaks.png} (100%)
+ rename cutepeaks.desktop => io.github.labsquare.CutePeaks.desktop (81%)
+
+diff --git a/cutepeaks.pro b/cutepeaks.pro
+index 9601ebd..00027b3 100644
+--- a/cutepeaks.pro
++++ b/cutepeaks.pro
+@@ -14,7 +14,7 @@ linux-g++ {
+     icon64.path = $$PREFIX/share/icons/hicolor/64x64/apps
+     icon64.files += cutepeaks.png
+     icon256.path = $$PREFIX/share/icons/hicolor/256x256/apps
+-    icon256.files += icon/256/cutepeaks.png
++    icon256.files += icon/256/io.github.labsquare.CutePeaks.png
+ 
+     INSTALLS += icon64
+     INSTALLS += icon256
+diff --git a/icon/256/cutepeaks.png b/icon/256/io.github.labsquare.CutePeaks.png
+similarity index 100%
+rename from icon/256/cutepeaks.png
+rename to icon/256/io.github.labsquare.CutePeaks.png
+diff --git a/cutepeaks.desktop b/io.github.labsquare.CutePeaks.desktop
+similarity index 81%
+rename from cutepeaks.desktop
+rename to io.github.labsquare.CutePeaks.desktop
+index 759636f..a89f42f 100644
+--- a/cutepeaks.desktop
++++ b/io.github.labsquare.CutePeaks.desktop
+@@ -3,6 +3,6 @@ Type=Application
+ Name=cutepeaks
+ Comment=A simple sanger trace file viewer
+ Exec=cutepeaks %F
+-Icon=cutepeaks
++Icon=io.github.labsquare.CutePeaks
+ Terminal=false
+ Categories=Science;Biology;Qt;
+diff --git a/io.github.labsquare.CutePeaks.metainfo.xml b/io.github.labsquare.CutePeaks.metainfo.xml
+index e55a93f..1145633 100644
+--- a/io.github.labsquare.CutePeaks.metainfo.xml
++++ b/io.github.labsquare.CutePeaks.metainfo.xml
+@@ -3,8 +3,10 @@
+   <!--Created with jdAppdataEdit 5.1-->
+   <id>io.github.labsquare.CutePeaks</id>
+   <name>CutePeaks</name>
+-  <summary>standalone Sanger trace viewer</summary>
+-  <developer_name>Labsquare</developer_name>
++  <summary>Standalone Sanger trace viewer</summary>
++  <developer id="org.labsquare">
++    <name>Labsquare</name>
++  </developer>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0+</project_license>
+   <description>
+@@ -29,4 +31,5 @@
+   <url type="homepage">https://labsquare.github.io/CutePeaks/</url>
+   <url type="bugtracker">https://github.com/labsquare/CutePeaks/issues</url>
+   <content_rating type="oars-1.1"/>
++  <launchable type="desktop-id">io.github.labsquare.CutePeaks.desktop</launchable>
+ </component>
+diff --git a/src/src.pro b/src/src.pro
+index 337420b..8c52597 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -28,10 +28,10 @@ RESOURCES += \
+ 
+ 
+ unix {
+-desktop.files += ../cutepeaks.desktop
++desktop.files += ../io.github.labsquare.CutePeaks.desktop
+ desktop.path = $$PREFIX/share/applications/
+ 
+-icons.files += ../cutepeaks.png
++icons.files += ../io.github.labsquare.CutePeaks.png
+ icons.path = $$PREFIX/share/icons/hicolor/64x64/apps
+ 
+ appdata.files += ../io.github.labsquare.CutePeaks.metainfo.xml

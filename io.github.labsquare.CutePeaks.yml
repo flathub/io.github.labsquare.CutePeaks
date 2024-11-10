@@ -3,8 +3,6 @@ runtime: org.kde.Platform
 runtime-version: '5.15-23.08'
 sdk: org.kde.Sdk
 command: cutepeaks
-rename-icon: cutepeaks
-rename-desktop-file: cutepeaks.desktop
 finish-args:
   - --share=ipc
   - --socket=wayland
@@ -31,3 +29,5 @@ modules:
       - type: patch
         path: icon256.patch
         use-git: true
+      - type: patch
+        path: appstream2.patch
