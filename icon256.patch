@@ -1,6 +1,4 @@
 From c7b926dae647de4c382afa5efe14b85a0a04b0a9 Mon Sep 17 00:00:00 2001
-Message-Id: <c7b926dae647de4c382afa5efe14b85a0a04b0a9.1671457248.git.matthias@mailaender.name>
-From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?= <matthias@mailaender.name>
 Date: Mon, 19 Dec 2022 14:38:06 +0100
 Subject: [PATCH] Generate a 256x256 one.
 

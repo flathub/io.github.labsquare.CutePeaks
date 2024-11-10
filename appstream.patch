@@ -1,6 +1,4 @@
 From 0909224a1dba32198de45c44984e0c1d2e59634b Mon Sep 17 00:00:00 2001
-Message-Id: <0909224a1dba32198de45c44984e0c1d2e59634b.1671456132.git.matthias@mailaender.name>
-From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?= <matthias@mailaender.name>
 Date: Mon, 19 Dec 2022 14:22:09 +0100
 Subject: [PATCH] Add an AppStream metadata file.
 
